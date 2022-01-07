@@ -31,9 +31,9 @@ class AppClass extends Component {
             </select>
           </div>
           {/* 딕셔너리 파일에서 설정한 key값을 파라미터로 넣어 실행 */}
-          <div>{this.props.t('AppClass.test')}</div>
+          <div>{this.props.t('test')}</div>
           <Link to="/">
-            <button>{this.props.t('AppClass.button')}</button>
+            <button>{this.props.t('button')}</button>
           </Link>
         </header>
       </div>
@@ -42,4 +42,4 @@ class AppClass extends Component {
 }
 
 // props를 통해 컴포넌트 내부에 t메소드와 i18n 인스턴스를 가져올 수 있음
-export default withTranslation()(AppClass);
+export default withTranslation(['AppClass'])(AppClass);

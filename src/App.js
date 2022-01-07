@@ -10,7 +10,7 @@ const App = () => {
    * t 메소드 : 리액트가 i18next에게 특정 key 값에 매칭되는 번역 데이터를 찾아달라고 요청하는 메소드
    * i18n : I18nextProvider를 통해 전달받은 i18n 세팅 데이터, 각 컴포넌트 파일별로 import 하지 않아도 됨
    */
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation(['App']);
   const [lang, setLang] = useState(sessionStorage.lang);
 
   const doChangeLanguage = (e) => {
@@ -32,9 +32,9 @@ const App = () => {
           </select>
         </div>
         {/* 딕셔너리 파일에서 설정한 key값을 인자로 전달 */}
-        <div>{t('App.test')}</div>
+        <div>{t('test')}</div>
         <Link to="/app-class">
-          <button>{t('App.button')}</button>
+          <button>{t('button')}</button>
         </Link>
       </header>
     </div>
