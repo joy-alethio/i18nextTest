@@ -10,7 +10,7 @@ const App = () => {
    * t 메소드 : 리액트가 i18next에게 특정 key 값에 매칭되는 번역 데이터를 찾아달라고 요청하는 메소드
    * i18n : I18nextProvider를 통해 전달받은 i18n 세팅 데이터, 각 컴포넌트 파일별로 import 하지 않아도 됨
    */
-  const { t, i18n } = useTranslation(['App']);
+  const { t, i18n } = useTranslation('App'); // 사용할 번역 파일, 만약 여러개면 배열에 넣어서 사용
   const [lang, setLang] = useState(sessionStorage.lang);
 
   const doChangeLanguage = (e) => {

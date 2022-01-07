@@ -42,4 +42,5 @@ class AppClass extends Component {
 }
 
 // props를 통해 컴포넌트 내부에 t메소드와 i18n 인스턴스를 가져올 수 있음
-export default withTranslation(['AppClass'])(AppClass);
+// 인자로 사용할 번역 파일을 넣는다, 만약 여러개면 배열에 넣어서 사용
+export default withTranslation('AppClass')(AppClass);
